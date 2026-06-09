@@ -1,0 +1,12 @@
+-- 
+- name: Linux Health
+  hosts: localhost
+  gather_facts: yes
+  
+  tasks:
+    - name: Get IP address
+      command: hostname -I
+      register: IP
+    - name: Display IP
+      debug:
+        var: IP.stdout
