@@ -7,3 +7,7 @@
     - name: Display hostname
       debug:
         msg: "hostname :{{ ansible_hostname }}"
+    - name: create a file
+      copy:
+        content: "Hello from yadhardha"
+        dest: /tmp/awx-demo.txt
