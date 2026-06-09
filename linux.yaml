@@ -4,6 +4,6 @@
   gather_facts: yes
 
   tasks:
-    - name: Display IP
+    - name: Display hostname
       debug:
-        var: ansible_default_ipv4.address
+        msg: "hostname :{{ ansible_hostname }}"
